@@ -2,8 +2,8 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
 
 :root {
-  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 0px 0px,
+    rgba(0, 0, 0, 0.08) 0px 2px 1px 2px;
 }
 
 * {
@@ -41,17 +41,15 @@
 }
 
 .gradientOne {
-  background: linear-gradient(
-    90deg,
-    hsla(191, 75%, 60%, 1) 0%,
-    hsla(248, 87%, 36%, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      hsla(191, 75%, 60%, 1) 0%,
+      hsla(248, 87%, 36%, 1) 100%);
 }
+
 .gradientTwo {
   background: linear-gradient(235deg, #ffffff 0%, #000f25 100%),
     linear-gradient(180deg, #6100ff 0%, #000000 100%),
-    linear-gradient(
-      235deg,
+    linear-gradient(235deg,
       #ffa3ac 0%,
       #ffa3ac 40%,
       #00043c calc(40% + 1px),
@@ -59,10 +57,8 @@
       #005d6c calc(60% + 1px),
       #005d6c 70%,
       #00c9b1 calc(70% + 1px),
-      #00c9b1 100%
-    ),
-    linear-gradient(
-      125deg,
+      #00c9b1 100%),
+    linear-gradient(125deg,
       #ffa3ac 0%,
       #ffa3ac 40%,
       #00043c calc(40% + 1px),
@@ -70,15 +66,13 @@
       #005d6c calc(60% + 1px),
       #005d6c 70%,
       #00c9b1 calc(70% + 1px),
-      #00c9b1 100%
-    );
+      #00c9b1 100%);
   background-blend-mode: soft-light, screen, darken, normal;
 }
 
 .gradientThree {
   background: linear-gradient(125deg, #ffffff 0%, #000000 100%),
-    linear-gradient(
-      200deg,
+    linear-gradient(200deg,
       #ffd9e8 0%,
       #ffd9e8 50%,
       #de95ba calc(50% + 1px),
@@ -86,10 +80,8 @@
       #7f4a88 calc(60% + 1px),
       #7f4a88 75%,
       #4a266a calc(75% + 1px),
-      #4a266a 100%
-    ),
-    linear-gradient(
-      113deg,
+      #4a266a 100%),
+    linear-gradient(113deg,
       #ffd9e8 0%,
       #ffd9e8 40%,
       #de95ba calc(40% + 1px),
@@ -97,8 +89,7 @@
       #7f4a88 calc(50% + 1px),
       #7f4a88 70%,
       #4a266a calc(70% + 1px),
-      #4a266a 100%
-    );
+      #4a266a 100%);
   background-blend-mode: overlay, overlay, normal;
 }
 
@@ -108,9 +99,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: var(--box-shadow);
 }
 
@@ -129,7 +120,11 @@ header .logo span {
   margin-left: 7px;
   cursor: pointer;
   color: #525252;
+  font-weight: 500;
 }
+
+
+
 
 header .themeSelector span {
   height: 20px;
@@ -147,43 +142,51 @@ header .themeSelector .activeTheme {
 }
 
 .addTask {
-  padding: 20px 15px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 50px;
   background-color: #ffffff;
   max-width: 500px;
-  margin: 20px auto;
+  margin: 10px auto;
   box-shadow: var(--box-shadow);
+  position: relative;
 }
 
 .addTask form {
   display: flex;
   gap: 7px;
+  position: relative;
 }
 
 .addTask form input {
   flex-grow: 1;
-  padding: 5px 5px;
-  border: 1px solid #eaeaea;
-  border-radius: 5px;
+  padding: 7px;
+  border: 2px solid #eaeaea;
+  border-radius: 50px;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .addTask form input:focus {
-  outline: 0.5px solid #eaeaea;
+  outline: 2px solid #eaeaea;
 }
 
 .addTask form button {
   background-color: #03ba5c;
   color: #ffffff;
   border: none;
+  font-weight: bold;
   padding: 5px 20px;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 18px;
+  position: absolute;
+  right: 0;
+  transform: translate(-8%, -50%);
+  top: 50%;
 }
 
 .addTask form button:hover {
-  background-color: #03b056;
+  background-color: #9c0288;
 }
 
 .showTask {
@@ -223,9 +226,10 @@ header .themeSelector .activeTheme {
 .showTask .clearAll {
   background-color: #0f6af3;
   color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 50px;
   cursor: pointer;
+  border: none;
 }
 
 .showTask .clearAll:hover {
@@ -249,7 +253,7 @@ header .themeSelector .activeTheme {
   width: 350px;
   box-shadow: var(--box-shadow);
   border-radius: 5px;
-  border-left: 5px solid #1365dfaf;
+  /* border-left: 5px solid #1365dfaf; */
 }
 
 .showTask li:hover {
@@ -288,4 +292,34 @@ header .themeSelector .activeTheme {
   .showTask li {
     width: 100%;
   }
+
+  .themeSelector p {
+    display: none;
+  }
+}
+
+.task {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+
+.task i:nth-child(2) {
+  margin-left: 10px;
 }
